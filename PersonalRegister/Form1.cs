@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Prog2Upp2
+namespace PersonalRegister
 {
     public partial class Form1 : Form
     {
@@ -17,10 +11,10 @@ namespace Prog2Upp2
             InitializeComponent();
         }
         
-        //List<Anställd> anställd = new List<Anställd>();
+        List<Anställd> anställd = new List<Anställd>();
         public int i;
-       
 
+        #region
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -54,7 +48,8 @@ namespace Prog2Upp2
         {
 
         }
-
+        #endregion
+        
         private void button1_Click(object sender, EventArgs e)
         {
             string namn;
@@ -65,9 +60,9 @@ namespace Prog2Upp2
             provision = double.Parse(textBox2.Text);
             försäljning = double.Parse(textBox3.Text);
 
-            
-            //anställd.Add(new Säljare(namn, provision, försäljning));
+            anställd.Add(new Säljare(namn, provision, försäljning));
             //i = anställd.Count - 1;
+            listBox1.DataSource = anställd;
             //listBox1.Items.Add(anställd[i].ToString(namn));
             //listBox2.Items.Add(anställd[i].ToString(namn) + anställd[i].BeräknaLön());
 

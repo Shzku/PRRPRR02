@@ -1,5 +1,5 @@
 ﻿
-namespace Prog2Upp2
+namespace PersonalRegister
 {
     partial class Form1
     {
