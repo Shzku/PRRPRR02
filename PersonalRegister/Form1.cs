@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace PersonalRegister
 {
     public partial class Form1 : Form
     {
+        BindingList<Anställd> anställd = new BindingList<Anställd>();
+        public int i;
+        
         public Form1()
         {
             InitializeComponent();
+            listBox1.DataSource = anställd;
+            listBox1.DisplayMember = "Namn";
+            listBox2.DataSource = anställd;
         }
-        
-        List<Anställd> anställd = new List<Anställd>();
-        public int i;
 
         #region
         private void label1_Click(object sender, EventArgs e)
@@ -60,12 +64,7 @@ namespace PersonalRegister
             provision = double.Parse(textBox2.Text);
             försäljning = double.Parse(textBox3.Text);
 
-            anställd.Add(new Säljare(namn, provision, försäljning));
-            //i = anställd.Count - 1;
-            listBox1.DataSource = anställd;
-            //listBox1.Items.Add(anställd[i].ToString(namn));
-            //listBox2.Items.Add(anställd[i].ToString(namn) + anställd[i].BeräknaLön());
-
+            anställd.Add(new Säljare(namn + " (Säljare)", provision, försäljning));
 
             textBox1.Clear();
             textBox2.Clear();

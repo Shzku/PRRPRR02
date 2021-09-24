@@ -9,14 +9,16 @@
             namn = n;
         }
 
+        public string Namn => namn;
+
         public double BeräknaLön()
         {
             return 0;
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            return "Hi";
+            return namn;
         }
     }
 }

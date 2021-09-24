@@ -16,9 +16,9 @@
             return försäljning * provision / 100;
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            return "hi";
+            return Namn + ": " + BeräknaLön();
         }
     }
 }
