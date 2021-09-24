@@ -88,7 +88,7 @@ namespace PersonalRegister
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(259, 30);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Registrera Försäljningen";
+            this.button1.Text = "Registrera Försäljning";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
