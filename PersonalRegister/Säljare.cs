@@ -11,7 +11,7 @@
             försäljning = f;
         }
 
-        public double BeräknaLön()
+        public override double BeräknaLön()
         {
             return försäljning * provision / 100;
         }

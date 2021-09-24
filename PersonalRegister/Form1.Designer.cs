@@ -60,7 +60,7 @@ namespace PersonalRegister
             this.label14 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -384,21 +384,19 @@ namespace PersonalRegister
             this.listBox2.Size = new System.Drawing.Size(241, 212);
             this.listBox2.TabIndex = 16;
             // 
-            // listBox3
+            // textBox9
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(569, 373);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(257, 36);
-            this.listBox3.TabIndex = 17;
+            this.textBox9.Location = new System.Drawing.Point(567, 358);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(259, 22);
+            this.textBox9.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 524);
-            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.textBox9);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label14);
@@ -422,8 +420,9 @@ namespace PersonalRegister
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.TextBox textBox9;
 
         #endregion
 
@@ -458,7 +457,6 @@ namespace PersonalRegister
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
     }
 }
 

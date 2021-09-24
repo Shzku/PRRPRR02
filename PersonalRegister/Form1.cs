@@ -74,21 +74,14 @@ namespace PersonalRegister
         private void button2_Click(object sender, EventArgs e)
         {
             string namn;
-            double timLön;
             double arbetsTid;
+            double timLön;
             
-
             namn = textBox4.Text;
             timLön = double.Parse(textBox5.Text);
             arbetsTid = double.Parse(textBox6.Text);
             
-            
-
-            //anställd.Add(new Konsult(namn, timLön, arbetsTid));
-            //i = anställd.Count - 1;
-            //listBox1.Items.Add(anställd[i].ToString(namn));
-            //listBox2.Items.Add(anställd[i].ToString(namn) + anställd[i].BeräknaLön());
-
+            anställd.Add(new Konsult(namn + " (Konsult)", arbetsTid, timLön));
 
             textBox4.Clear();
             textBox5.Clear();
@@ -104,12 +97,7 @@ namespace PersonalRegister
             namn = textBox7.Text;
             månadsLön = double.Parse(textBox8.Text);
             
-
-            //anställd.Add(new Kontorist(namn, månadsLön));
-            //i = anställd.Count - 1;
-            //listBox1.Items.Add(anställd[i].ToString(namn));
-            //listBox2.Items.Add(anställd[i].ToString(namn) + anställd[i].BeräknaLön());
-           
+            anställd.Add(new Kontorist(namn + " (Konsult)", månadsLön));
 
             textBox7.Clear();
             textBox8.Clear();
@@ -119,25 +107,14 @@ namespace PersonalRegister
         private void button4_Click(object sender, EventArgs e)
         {
             double totLön = 0;
-            
-            //foreach(Anställd a in anställd)
-            //{
-            //    if(a is Säljare)
-            //    {
-            //        totLön += a.BeräknaLön();
-            //    }
-            //    if(a is Konsult)
-            //    {
-            //        totLön += a.BeräknaLön();
-            //    }
-            //    if(a is Kontorist)
-            //    {
-            //        totLön += a.BeräknaLön();
-            //    }
-            //}
 
-            listBox3.Items.Clear();
-            listBox3.Items.Add(totLön);
+            foreach(Anställd a in anställd)
+            {
+                totLön += a.BeräknaLön();
+            }
+
+            textBox9.Clear();
+            textBox9.Text = Convert.ToString(totLön);
             
         }
     }

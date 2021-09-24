@@ -11,7 +11,7 @@
 
         public string Namn => namn;
 
-        public double BeräknaLön()
+        public virtual double BeräknaLön()
         {
             return 0;
         }

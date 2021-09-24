@@ -9,14 +9,14 @@
             månadsLön = m;
         }
 
-        public double BeräknaLön()
+        public override double BeräknaLön()
         {
             return månadsLön;
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            return "hi";
+            return Namn + ": " + BeräknaLön();
         }
     }
 }
