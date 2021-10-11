@@ -7,3 +7,4 @@ C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\obj\Debug\Clipart.csproj
 C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\obj\Debug\Clipart.csproj.CoreCompileInputs.cache
 C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\obj\Debug\Clipart.exe
 C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\obj\Debug\Clipart.pdb
+C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\obj\Debug\Clipart.Form1.resources

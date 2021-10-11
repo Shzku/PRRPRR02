@@ -30,13 +30,13 @@
         private void InitializeComponent()
         {
             this.skapaGBX = new System.Windows.Forms.GroupBox();
-            this.breddLBL = new System.Windows.Forms.Label();
-            this.höjdLBL = new System.Windows.Forms.Label();
-            this.breddTBX = new System.Windows.Forms.TextBox();
-            this.höjdTBX = new System.Windows.Forms.TextBox();
-            this.skapaTriBTN = new System.Windows.Forms.Button();
-            this.skapaCirBTN = new System.Windows.Forms.Button();
             this.skapaLinBTN = new System.Windows.Forms.Button();
+            this.skapaCirBTN = new System.Windows.Forms.Button();
+            this.skapaTriBTN = new System.Windows.Forms.Button();
+            this.höjdTBX = new System.Windows.Forms.TextBox();
+            this.breddTBX = new System.Windows.Forms.TextBox();
+            this.höjdLBL = new System.Windows.Forms.Label();
+            this.breddLBL = new System.Windows.Forms.Label();
             this.sammanlagBTN = new System.Windows.Forms.Button();
             this.figurLBX = new System.Windows.Forms.ListBox();
             this.sammanlagTBX = new System.Windows.Forms.TextBox();
@@ -61,44 +61,15 @@
             this.skapaGBX.TabStop = false;
             this.skapaGBX.Text = "Skapa";
             // 
-            // breddLBL
+            // skapaLinBTN
             // 
-            this.breddLBL.Location = new System.Drawing.Point(6, 37);
-            this.breddLBL.Name = "breddLBL";
-            this.breddLBL.Size = new System.Drawing.Size(100, 23);
-            this.breddLBL.TabIndex = 0;
-            this.breddLBL.Text = "Bredd";
-            // 
-            // höjdLBL
-            // 
-            this.höjdLBL.Location = new System.Drawing.Point(6, 67);
-            this.höjdLBL.Name = "höjdLBL";
-            this.höjdLBL.Size = new System.Drawing.Size(100, 23);
-            this.höjdLBL.TabIndex = 1;
-            this.höjdLBL.Text = "Höjd";
-            // 
-            // breddTBX
-            // 
-            this.breddTBX.Location = new System.Drawing.Point(67, 35);
-            this.breddTBX.Name = "breddTBX";
-            this.breddTBX.Size = new System.Drawing.Size(136, 22);
-            this.breddTBX.TabIndex = 2;
-            // 
-            // höjdTBX
-            // 
-            this.höjdTBX.Location = new System.Drawing.Point(67, 68);
-            this.höjdTBX.Name = "höjdTBX";
-            this.höjdTBX.Size = new System.Drawing.Size(136, 22);
-            this.höjdTBX.TabIndex = 3;
-            // 
-            // skapaTriBTN
-            // 
-            this.skapaTriBTN.Location = new System.Drawing.Point(67, 105);
-            this.skapaTriBTN.Name = "skapaTriBTN";
-            this.skapaTriBTN.Size = new System.Drawing.Size(136, 29);
-            this.skapaTriBTN.TabIndex = 4;
-            this.skapaTriBTN.Text = "Skapa Triangel";
-            this.skapaTriBTN.UseVisualStyleBackColor = true;
+            this.skapaLinBTN.Location = new System.Drawing.Point(67, 175);
+            this.skapaLinBTN.Name = "skapaLinBTN";
+            this.skapaLinBTN.Size = new System.Drawing.Size(136, 29);
+            this.skapaLinBTN.TabIndex = 5;
+            this.skapaLinBTN.Text = "Skapa Linje";
+            this.skapaLinBTN.UseVisualStyleBackColor = true;
+            this.skapaLinBTN.Click += new System.EventHandler(this.skapaLinBTN_Click);
             // 
             // skapaCirBTN
             // 
@@ -108,15 +79,47 @@
             this.skapaCirBTN.TabIndex = 5;
             this.skapaCirBTN.Text = "Skapa Cirkel";
             this.skapaCirBTN.UseVisualStyleBackColor = true;
+            this.skapaCirBTN.Click += new System.EventHandler(this.skapaCirBTN_Click);
             // 
-            // skapaLinBTN
+            // skapaTriBTN
             // 
-            this.skapaLinBTN.Location = new System.Drawing.Point(67, 175);
-            this.skapaLinBTN.Name = "skapaLinBTN";
-            this.skapaLinBTN.Size = new System.Drawing.Size(136, 29);
-            this.skapaLinBTN.TabIndex = 5;
-            this.skapaLinBTN.Text = "Skapa Linje";
-            this.skapaLinBTN.UseVisualStyleBackColor = true;
+            this.skapaTriBTN.Location = new System.Drawing.Point(67, 105);
+            this.skapaTriBTN.Name = "skapaTriBTN";
+            this.skapaTriBTN.Size = new System.Drawing.Size(136, 29);
+            this.skapaTriBTN.TabIndex = 4;
+            this.skapaTriBTN.Text = "Skapa Triangel";
+            this.skapaTriBTN.UseVisualStyleBackColor = true;
+            this.skapaTriBTN.Click += new System.EventHandler(this.skapaTriBTN_Click);
+            // 
+            // höjdTBX
+            // 
+            this.höjdTBX.Location = new System.Drawing.Point(67, 68);
+            this.höjdTBX.Name = "höjdTBX";
+            this.höjdTBX.Size = new System.Drawing.Size(136, 22);
+            this.höjdTBX.TabIndex = 3;
+            // 
+            // breddTBX
+            // 
+            this.breddTBX.Location = new System.Drawing.Point(67, 35);
+            this.breddTBX.Name = "breddTBX";
+            this.breddTBX.Size = new System.Drawing.Size(136, 22);
+            this.breddTBX.TabIndex = 2;
+            // 
+            // höjdLBL
+            // 
+            this.höjdLBL.Location = new System.Drawing.Point(6, 67);
+            this.höjdLBL.Name = "höjdLBL";
+            this.höjdLBL.Size = new System.Drawing.Size(100, 23);
+            this.höjdLBL.TabIndex = 1;
+            this.höjdLBL.Text = "Höjd";
+            // 
+            // breddLBL
+            // 
+            this.breddLBL.Location = new System.Drawing.Point(6, 37);
+            this.breddLBL.Name = "breddLBL";
+            this.breddLBL.Size = new System.Drawing.Size(100, 23);
+            this.breddLBL.TabIndex = 0;
+            this.breddLBL.Text = "Bredd";
             // 
             // sammanlagBTN
             // 
@@ -126,6 +129,7 @@
             this.sammanlagBTN.TabIndex = 5;
             this.sammanlagBTN.Text = "Sammanlagd area";
             this.sammanlagBTN.UseVisualStyleBackColor = true;
+            this.sammanlagBTN.Click += new System.EventHandler(this.sammanlagBTN_Click);
             // 
             // figurLBX
             // 
@@ -177,6 +181,8 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.TextBox sammanlagTBX;
 
         private System.Windows.Forms.GroupBox skapaGBX;
         private System.Windows.Forms.Label breddLBL;

@@ -2,7 +2,7 @@
 {
     public class Linje : Figur
     {
-        public Linje(double bredd, double höjd) : base(bredd, höjd)
+        public Linje(double bredd, double höjd, string info) : base(bredd, höjd, info)
         {
             
         }

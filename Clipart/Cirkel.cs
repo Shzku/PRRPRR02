@@ -7,7 +7,7 @@ namespace Clipart
         private double _bredd;
         private double _höjd;
         
-        public Cirkel(double bredd, double höjd) : base(bredd, höjd)
+        public Cirkel(double bredd, double höjd, string info) : base(bredd, höjd, info)
         {
             _bredd = bredd;
             _höjd = höjd;
