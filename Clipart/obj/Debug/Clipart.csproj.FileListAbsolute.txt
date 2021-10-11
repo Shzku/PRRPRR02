@@ -1,0 +1,9 @@
+C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\bin\Debug\Clipart.exe.config
+C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\bin\Debug\Clipart.exe
+C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\bin\Debug\Clipart.pdb
+C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\obj\Debug\Clipart.csproj.AssemblyReference.cache
+C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\obj\Debug\Clipart.Properties.Resources.resources
+C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\obj\Debug\Clipart.csproj.GenerateResource.cache
+C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\obj\Debug\Clipart.csproj.CoreCompileInputs.cache
+C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\obj\Debug\Clipart.exe
+C:\Users\19seth\Projects\SchoolProjects\Clipart\Clipart\obj\Debug\Clipart.pdb
