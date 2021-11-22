@@ -45,7 +45,7 @@
       this.dgvMatcher.Location = new System.Drawing.Point(7, 6);
       this.dgvMatcher.Name = "dgvMatcher";
       this.dgvMatcher.RowTemplate.Height = 24;
-      this.dgvMatcher.Size = new System.Drawing.Size(538, 346);
+      this.dgvMatcher.Size = new System.Drawing.Size(640, 346);
       this.dgvMatcher.TabIndex = 0;
       this.dgvMatcher.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatcher_CellEndEdit);
       this.dgvMatcher.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvMatcher_UserAddedRow);
@@ -74,7 +74,7 @@
       // 
       this.btnMålrikast.Location = new System.Drawing.Point(7, 359);
       this.btnMålrikast.Name = "btnMålrikast";
-      this.btnMålrikast.Size = new System.Drawing.Size(174, 27);
+      this.btnMålrikast.Size = new System.Drawing.Size(233, 27);
       this.btnMålrikast.TabIndex = 1;
       this.btnMålrikast.Text = "Målrikast";
       this.btnMålrikast.UseVisualStyleBackColor = true;
@@ -82,16 +82,16 @@
       // 
       // tbxMålrikast
       // 
-      this.tbxMålrikast.Location = new System.Drawing.Point(187, 361);
+      this.tbxMålrikast.Location = new System.Drawing.Point(246, 361);
       this.tbxMålrikast.Name = "tbxMålrikast";
-      this.tbxMålrikast.Size = new System.Drawing.Size(358, 22);
+      this.tbxMålrikast.Size = new System.Drawing.Size(398, 22);
       this.tbxMålrikast.TabIndex = 2;
       // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(585, 409);
+      this.ClientSize = new System.Drawing.Size(656, 409);
       this.Controls.Add(this.tbxMålrikast);
       this.Controls.Add(this.btnMålrikast);
       this.Controls.Add(this.dgvMatcher);
