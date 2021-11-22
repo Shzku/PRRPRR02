@@ -20,10 +20,10 @@ namespace FotbollsLigan
       matcher.Add(nyMatch);
     }
 
-    private void dgvMatcher_CellEndEdit(object senler, DataGridViewCellEventArgs e)
+    private void dgvMatcher_CellEndEdit(object sender, DataGridViewCellEventArgs e)
     {
       int i = e.RowIndex; // Index för den rad som redigerats. 
-
+      
       if (e.ColumnIndex == 0)
         matcher[i].HemmaLag = (string)dgvMatcher.Rows[i].Cells[0].Value;
       else if (e.ColumnIndex == 1)
@@ -31,15 +31,15 @@ namespace FotbollsLigan
       else if (e.ColumnIndex == 2)
         matcher[i].MålHemmaLag = int.Parse((string)dgvMatcher.Rows[i].Cells[2].Value);
       else if (e.ColumnIndex == 3)
-        matcher[i].Må1BortaLag = int.Parse((string)dgvMatcher.Rows[i].Cells[3].Value);
+        matcher[i].MålBortaLag = int.Parse((string)dgvMatcher.Rows[i].Cells[3].Value);
     }
 
     private void btnMålrikast_Click(object sender, EventArgs e)
     {
-      string hemmalag
-      string bortalag
+      string hemmalag;
+      string bortalag;
       int antalMål = 0;
-      for (int i = 0; i < matcher.Count; i - frf)
+      for (int i = 0; i < matcher.Count; i++)
       {
         if (matcher[i].MålHemmaLag + matcher[i].MålBortaLag > antalMål)
         {
@@ -53,8 +53,8 @@ namespace FotbollsLigan
   }
 
   public class Match {
-    public string Hemmalag { get; set; }
-    public string Bortalag { get; set; }
+    public string HemmaLag { get; set; }
+    public string BortaLag { get; set; }
     public int MålHemmaLag { get; set; }
     public int MålBortaLag { get; set; }
   } 

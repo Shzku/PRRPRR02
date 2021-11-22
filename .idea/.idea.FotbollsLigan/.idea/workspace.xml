@@ -4,13 +4,26 @@
     <projectFile>FotbollsLigan/FotbollsLigan.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4aa27ad-7119-4050-a2de-942f2f54b5f9" name="Changes" comment="" />
+    <list default="true" id="c4aa27ad-7119-4050-a2de-942f2f54b5f9" name="Changes" comment="epic">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FotbollsLigan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FotbollsLigan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FotbollsLigan/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FotbollsLigan/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FotbollsLigan/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FotbollsLigan/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FotbollsLigan/FotbollsLigan.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FotbollsLigan/FotbollsLigan.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FotbollsLigan/obj/Debug/FotbollsLigan.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FotbollsLigan/obj/Debug/FotbollsLigan.csproj.AssemblyReference.cache" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/FotbollsLigan/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="21HN8RmEDLvugXBdJm8A9BvvBbm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,16 +62,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1637593902685</updated>
-      <workItem from="1637593926094" duration="310000" />
+      <workItem from="1637593926094" duration="2191000" />
     </task>
+    <task id="LOCAL−00001" summary="epic">
+      <created>1637594939123</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1637594939123</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="epic" />
+    <option name="LAST_COMMIT_MESSAGE" value="epic" />
   </component>
 </project>
