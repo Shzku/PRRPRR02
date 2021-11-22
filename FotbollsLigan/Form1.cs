@@ -23,7 +23,7 @@ namespace FotbollsLigan
     private void dgvMatcher_CellEndEdit(object sender, DataGridViewCellEventArgs e)
     {
       int i = e.RowIndex; // Index för den rad som redigerats. 
-      
+
       if (e.ColumnIndex == 0)
         matcher[i].HemmaLag = (string)dgvMatcher.Rows[i].Cells[0].Value;
       else if (e.ColumnIndex == 1)
@@ -36,8 +36,8 @@ namespace FotbollsLigan
 
     private void btnMålrikast_Click(object sender, EventArgs e)
     {
-      string hemmalag;
-      string bortalag;
+      string hemmalag = "";
+      string bortalag = "";
       int antalMål = 0;
       for (int i = 0; i < matcher.Count; i++)
       {
@@ -52,10 +52,11 @@ namespace FotbollsLigan
     }
   }
 
-  public class Match {
+  public class Match
+  {
     public string HemmaLag { get; set; }
     public string BortaLag { get; set; }
     public int MålHemmaLag { get; set; }
     public int MålBortaLag { get; set; }
-  } 
-} 
+  }
+}

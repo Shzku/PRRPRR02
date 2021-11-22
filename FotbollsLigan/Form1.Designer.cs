@@ -47,7 +47,6 @@
       this.dgvMatcher.RowTemplate.Height = 24;
       this.dgvMatcher.Size = new System.Drawing.Size(538, 346);
       this.dgvMatcher.TabIndex = 0;
-      this.dgvMatcher.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
       this.dgvMatcher.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatcher_CellEndEdit);
       this.dgvMatcher.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvMatcher_UserAddedRow);
       // 
