@@ -112,8 +112,6 @@
     private System.Windows.Forms.DataGridViewTextBoxColumn MålHemmaLag;
     private System.Windows.Forms.DataGridViewTextBoxColumn MålBortaLag;
 
-    private System.Windows.Forms.DataGridView dataGridView1;
-
     #endregion
   }
 }
