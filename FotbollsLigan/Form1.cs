@@ -20,6 +20,11 @@ namespace FotbollsLigan
       matcher.Add(nyMatch);
     }
 
+    private void dgvMatcher_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+    {
+      matcher.RemoveAt(e.Row.Index);
+    }
+    
     private void dgvMatcher_CellEndEdit(object sender, DataGridViewCellEventArgs e)
     {
       int i = e.RowIndex; // Index för den rad som redigerats. 

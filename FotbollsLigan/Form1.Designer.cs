@@ -49,6 +49,7 @@
       this.dgvMatcher.TabIndex = 0;
       this.dgvMatcher.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatcher_CellEndEdit);
       this.dgvMatcher.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvMatcher_UserAddedRow);
+      this.dgvMatcher.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvMatcher_UserDeletingRow);
       // 
       // HemmaLag
       // 

@@ -4,11 +4,10 @@
     <projectFile>FotbollsLigan/FotbollsLigan.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4aa27ad-7119-4050-a2de-942f2f54b5f9" name="Changes" comment="epic">
+    <list default="true" id="c4aa27ad-7119-4050-a2de-942f2f54b5f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FotbollsLigan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FotbollsLigan/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FotbollsLigan/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FotbollsLigan/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FotbollsLigan/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FotbollsLigan/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FotbollsLigan/FotbollsLigan.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FotbollsLigan/FotbollsLigan.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FotbollsLigan/obj/Debug/FotbollsLigan.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FotbollsLigan/obj/Debug/FotbollsLigan.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +61,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1637593902685</updated>
-      <workItem from="1637593926094" duration="2191000" />
+      <workItem from="1637593926094" duration="2825000" />
+      <workItem from="1637827177261" duration="966000" />
     </task>
     <task id="LOCAL−00001" summary="epic">
       <created>1637594939123</created>
@@ -70,14 +70,38 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1637594939123</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="ok">
+      <created>1637596177290</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1637596177290</updated>
+    </task>
+    <task id="LOCAL−00003" summary="ok">
+      <created>1637596397316</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1637596397316</updated>
+    </task>
+    <task id="LOCAL−00004" summary="ok">
+      <created>1637596522459</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1637596522459</updated>
+    </task>
+    <task id="LOCAL−00005" summary="again">
+      <created>1637596651263</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1637596651263</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -89,10 +113,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="epic" />
-    <option name="LAST_COMMIT_MESSAGE" value="epic" />
+    <MESSAGE value="ok" />
+    <MESSAGE value="again" />
+    <option name="LAST_COMMIT_MESSAGE" value="again" />
   </component>
 </project>
