@@ -35,6 +35,7 @@
       this.MålBortaLag = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.btnMålrikast = new System.Windows.Forms.Button();
       this.tbxMålrikast = new System.Windows.Forms.TextBox();
+      this.btnStorstMål = new System.Windows.Forms.Button();
       ((System.ComponentModel.ISupportInitialize)(this.dgvMatcher)).BeginInit();
       this.SuspendLayout();
       // 
@@ -75,7 +76,7 @@
       // 
       this.btnMålrikast.Location = new System.Drawing.Point(7, 359);
       this.btnMålrikast.Name = "btnMålrikast";
-      this.btnMålrikast.Size = new System.Drawing.Size(233, 27);
+      this.btnMålrikast.Size = new System.Drawing.Size(114, 27);
       this.btnMålrikast.TabIndex = 1;
       this.btnMålrikast.Text = "Målrikast";
       this.btnMålrikast.UseVisualStyleBackColor = true;
@@ -88,11 +89,22 @@
       this.tbxMålrikast.Size = new System.Drawing.Size(398, 22);
       this.tbxMålrikast.TabIndex = 2;
       // 
+      // btnStorstMål
+      // 
+      this.btnStorstMål.Location = new System.Drawing.Point(127, 360);
+      this.btnStorstMål.Name = "btnStorstMål";
+      this.btnStorstMål.Size = new System.Drawing.Size(113, 26);
+      this.btnStorstMål.TabIndex = 3;
+      this.btnStorstMål.Text = "Största Målskillnad";
+      this.btnStorstMål.UseVisualStyleBackColor = true;
+      this.btnStorstMål.Click += new System.EventHandler(this.btnStorstMål_Click);
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(656, 409);
+      this.Controls.Add(this.btnStorstMål);
       this.Controls.Add(this.tbxMålrikast);
       this.Controls.Add(this.btnMålrikast);
       this.Controls.Add(this.dgvMatcher);
@@ -102,6 +114,8 @@
       this.ResumeLayout(false);
       this.PerformLayout();
     }
+
+    private System.Windows.Forms.Button btnStorstMål;
 
     private System.Windows.Forms.Button btnMålrikast;
     private System.Windows.Forms.TextBox tbxMålrikast;

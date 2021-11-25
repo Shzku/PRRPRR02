@@ -55,6 +55,23 @@ namespace FotbollsLigan
       }
       tbxMålrikast.Text = hemmalag + " " + bortalag + ": " + antalMål;
     }
+
+    private void btnStorstMål_Click(object sender, EventArgs e)
+    {
+      string hemmalag = "";
+      string bortalag = "";
+      int målSkillnad = 0;
+      for (int i = 0; i < matcher.Count; i++)
+      { 
+        if (Math.Abs(matcher[i].MålHemmaLag - matcher[i].MålBortaLag) > målSkillnad)
+        {
+          hemmalag = matcher[i].HemmaLag;
+          bortalag = matcher[i].BortaLag;
+          målSkillnad = Math.Abs(matcher[i].MålHemmaLag - matcher[i].MålBortaLag);
+        }
+      }
+      tbxMålrikast.Text = hemmalag + " " + bortalag + ": " + målSkillnad;
+    }
   }
 
   public class Match
