@@ -72,6 +72,37 @@ namespace FotbollsLigan
       }
       tbxMålrikast.Text = hemmalag + " " + bortalag + ": " + målSkillnad;
     }
+
+    private void btnFlyttRadUpp_Click(object sender, EventArgs e)
+    {
+      try
+      {
+        int rowIndex = dgvMatcher.SelectedCells[0].OwningRow.Index;
+        if (rowIndex == 0) 
+          return;
+        DataGridViewRow selectedRow = dgvMatcher.Rows[rowIndex];
+        dgvMatcher.Rows.Remove(selectedRow);
+        dgvMatcher.Rows.Insert(rowIndex - 1, selectedRow);
+      }
+      catch { }
+    }
+
+    private void btnFlyttRadNer_Click(object sender, EventArgs e)
+    {
+      try
+      {
+        int totalRows = dgvMatcher.Rows.Count;
+        int rowIndex = dgvMatcher.SelectedCells[0].OwningRow.Index;
+        if (rowIndex == totalRows - 1) 
+          return;
+        DataGridViewRow selectedRow = dgvMatcher.Rows[rowIndex];
+        if (rowIndex + 1 >= dgvMatcher.Rows.Count - 1) 
+          return;
+        dgvMatcher.Rows.Remove(selectedRow);
+        dgvMatcher.Rows.Insert(rowIndex + 1, selectedRow);
+      }
+      catch { }
+    }
   }
 
   public class Match

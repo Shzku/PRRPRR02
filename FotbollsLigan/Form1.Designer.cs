@@ -36,6 +36,8 @@
       this.btnMålrikast = new System.Windows.Forms.Button();
       this.tbxMålrikast = new System.Windows.Forms.TextBox();
       this.btnStorstMål = new System.Windows.Forms.Button();
+      this.btnFlyttRadNer = new System.Windows.Forms.Button();
+      this.btnFlyttRadUpp = new System.Windows.Forms.Button();
       ((System.ComponentModel.ISupportInitialize)(this.dgvMatcher)).BeginInit();
       this.SuspendLayout();
       // 
@@ -99,11 +101,33 @@
       this.btnStorstMål.UseVisualStyleBackColor = true;
       this.btnStorstMål.Click += new System.EventHandler(this.btnStorstMål_Click);
       // 
+      // btnFlyttRadNer
+      // 
+      this.btnFlyttRadNer.Location = new System.Drawing.Point(584, 384);
+      this.btnFlyttRadNer.Name = "btnFlyttRadNer";
+      this.btnFlyttRadNer.Size = new System.Drawing.Size(60, 34);
+      this.btnFlyttRadNer.TabIndex = 4;
+      this.btnFlyttRadNer.Text = "ᐯ";
+      this.btnFlyttRadNer.UseVisualStyleBackColor = true;
+      this.btnFlyttRadNer.Click += new System.EventHandler(this.btnFlyttRadNer_Click);
+      // 
+      // btnFlyttRadUpp
+      // 
+      this.btnFlyttRadUpp.Location = new System.Drawing.Point(518, 384);
+      this.btnFlyttRadUpp.Name = "btnFlyttRadUpp";
+      this.btnFlyttRadUpp.Size = new System.Drawing.Size(60, 34);
+      this.btnFlyttRadUpp.TabIndex = 5;
+      this.btnFlyttRadUpp.Text = "ᐱ";
+      this.btnFlyttRadUpp.UseVisualStyleBackColor = true;
+      this.btnFlyttRadUpp.Click += new System.EventHandler(this.btnFlyttRadUpp_Click);
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(656, 409);
+      this.ClientSize = new System.Drawing.Size(656, 430);
+      this.Controls.Add(this.btnFlyttRadUpp);
+      this.Controls.Add(this.btnFlyttRadNer);
       this.Controls.Add(this.btnStorstMål);
       this.Controls.Add(this.tbxMålrikast);
       this.Controls.Add(this.btnMålrikast);
@@ -114,6 +138,12 @@
       this.ResumeLayout(false);
       this.PerformLayout();
     }
+
+    private System.Windows.Forms.Button btnFlyttRadUpp;
+    private System.Windows.Forms.Button btnFlyttRadNer;
+
+    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button button2;
 
     private System.Windows.Forms.Button btnStorstMål;
 

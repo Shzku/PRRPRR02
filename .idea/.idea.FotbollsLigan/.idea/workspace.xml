@@ -4,7 +4,7 @@
     <projectFile>FotbollsLigan/FotbollsLigan.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4aa27ad-7119-4050-a2de-942f2f54b5f9" name="Changes" comment="epic">
+    <list default="true" id="c4aa27ad-7119-4050-a2de-942f2f54b5f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FotbollsLigan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FotbollsLigan/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FotbollsLigan/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FotbollsLigan/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FotbollsLigan/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FotbollsLigan/Form1.cs" afterDir="false" />
@@ -61,7 +61,8 @@
       <option name="presentableId" value="Default" />
       <updated>1637593902685</updated>
       <workItem from="1637593926094" duration="2825000" />
-      <workItem from="1637827177261" duration="2590000" />
+      <workItem from="1637827177261" duration="3492000" />
+      <workItem from="1638197109660" duration="2118000" />
     </task>
     <task id="LOCAL−00001" summary="epic">
       <created>1637594939123</created>
@@ -99,7 +100,13 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1637828932453</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="got the largest difference">
+      <created>1637830111567</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1637830111567</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +132,7 @@
     <MESSAGE value="ok" />
     <MESSAGE value="again" />
     <MESSAGE value="epic" />
-    <option name="LAST_COMMIT_MESSAGE" value="epic" />
+    <MESSAGE value="got the largest difference" />
+    <option name="LAST_COMMIT_MESSAGE" value="got the largest difference" />
   </component>
 </project>
