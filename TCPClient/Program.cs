@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace TCPClient
 {
     internal static class Program
@@ -12,6 +14,11 @@ namespace TCPClient
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Klient());
+            AllocConsole();
         }
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool AllocConsole();
     }
 }
