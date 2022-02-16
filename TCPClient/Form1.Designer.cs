@@ -62,6 +62,7 @@
             this.btnConnect.Text = "Anslut";
             this.btnConnect.UseMnemonic = false;
             this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // btnUp
             // 
@@ -71,6 +72,7 @@
             this.btnUp.TabIndex = 3;
             this.btnUp.Text = "Upp";
             this.btnUp.UseVisualStyleBackColor = true;
+            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
             // 
             // btnRight
             // 
@@ -80,6 +82,7 @@
             this.btnRight.TabIndex = 4;
             this.btnRight.Text = "Höger";
             this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
             // btnLeft
             // 
@@ -89,6 +92,7 @@
             this.btnLeft.TabIndex = 5;
             this.btnLeft.Text = "Vänster";
             this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
             // btnDown
             // 
@@ -98,6 +102,7 @@
             this.btnDown.TabIndex = 6;
             this.btnDown.Text = "Ner";
             this.btnDown.UseVisualStyleBackColor = true;
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
             // Klient
             // 
