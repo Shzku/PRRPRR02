@@ -10,6 +10,12 @@ namespace TCPServer
     public partial class Form1 : Form
     {
         private const int portNum = 4200;
+
+        private bool topLocked = false;
+        private bool bottomLocked = false;
+        private bool leftLocked = false;
+        private bool rightLocked = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -36,23 +42,89 @@ namespace TCPServer
                 while (!done)
                 {
                     byte[] buffer = new byte[1024];
-                    await ns.ReadAsync(buffer, 0, buffer.Length);
+                    int n;
+                    n = await ns.ReadAsync(buffer, 0, buffer.Length);
 
-                    Debug.WriteLine(Encoding.UTF8.GetString(buffer, 0, buffer.Length));
-                    MessageBox.Show(Encoding.UTF8.GetString(buffer, 0, buffer.Length));
-                }
-                /*byte[] byteTime = Encoding.ASCII.GetBytes(DateTime.Now.ToString());
+                    string cmd = Encoding.UTF8.GetString(buffer, 0, n);
 
-                try
-                {
-                    ns.Write(byteTime, 0, byteTime.Length);
-                    ns.Close();
-                    client.Close();
+                    
+
+                    switch(cmd)
+                    {
+                        case "UP!":
+                            Debug.WriteLine("up command received");
+                            pbxSprite.Top -= 20;
+                            if (pbxSprite.Top <= 0)
+                            {
+                                pbxSprite.Top = 0;
+                                buffer = Encoding.UTF8.GetBytes("UPLOCKED");
+                                await ns.WriteAsync(buffer, 0, buffer.Length);
+                                topLocked = true;
+                            }
+                            if(bottomLocked)
+                            {
+                                buffer = Encoding.UTF8.GetBytes("UNLOCKDOWN");
+                                await ns.WriteAsync(buffer, 0, buffer.Length);
+                                bottomLocked = false;
+                            }
+                            break;
+                        case "DOWN!":
+                            Debug.WriteLine("down command received");
+                            pbxSprite.Top += 20;
+                            if (pbxSprite.Bottom >= ClientRectangle.Height)
+                            {
+                                pbxSprite.Top = ClientRectangle.Height - pbxSprite.Height;
+                                buffer = Encoding.UTF8.GetBytes("DOWNLOCKED");
+                                await ns.WriteAsync(buffer, 0, buffer.Length);
+                                bottomLocked = true;
+                            }
+                            if (topLocked)
+                            {
+                                buffer = Encoding.UTF8.GetBytes("UNLOCKUP");
+                                await ns.WriteAsync(buffer, 0, buffer.Length);
+                                topLocked = false;
+                            }
+                            break;
+                        case "LEFT!":
+                            Debug.WriteLine("left command received");
+                            pbxSprite.Left -= 20;
+                            if (pbxSprite.Left <= 0)
+                            {
+                                pbxSprite.Left = 0;
+                                buffer = Encoding.UTF8.GetBytes("LEFTLOCKED");
+                                await ns.WriteAsync(buffer, 0, buffer.Length);
+                                leftLocked = true;
+                            }
+                            if(rightLocked)
+                            {
+                                buffer = Encoding.UTF8.GetBytes("UNLOCKRIGHT");
+                                await ns.WriteAsync(buffer, 0, buffer.Length);
+                                rightLocked = false;
+                            }
+                            break;
+                        case "RIGHT!":
+                            Debug.WriteLine("right command received");
+                            pbxSprite.Left += 20;
+                            if (pbxSprite.Right >= ClientRectangle.Width)
+                            {
+                                pbxSprite.Left = ClientRectangle.Width - pbxSprite.Width;
+                                buffer = Encoding.UTF8.GetBytes("RIGHTLOCKED");
+                                await ns.WriteAsync(buffer, 0, buffer.Length);
+                                rightLocked = true;
+                            }
+                            if (leftLocked)
+                            {
+                                buffer = Encoding.UTF8.GetBytes("UNLOCKLEFT");
+                                await ns.WriteAsync(buffer, 0, buffer.Length);
+                                leftLocked = false;
+                            }
+                            break;
+                        default:
+                            Debug.WriteLine(cmd);
+                            Debug.WriteLine("error");
+                            break;
+                    }
                 }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.ToString());
-                }*/
             }
 
             Debug.WriteLine("listener quit");

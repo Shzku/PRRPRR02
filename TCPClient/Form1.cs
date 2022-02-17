@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Net.Sockets;
 using System.Text;
 
@@ -14,33 +15,18 @@ namespace TCPClient
         public Klient()
         {
             InitializeComponent();
-
-            try
-            {
-                //var client = new TcpClient(hostName, portNum);
-
-                //NetworkStream ns = client.GetStream();
-
-                //int bytesRead = ns.Read(bytes, 0, bytes.Length);
-
-                //Console.WriteLine(Encoding.ASCII.GetString(bytes, 0, bytesRead));
-
-                //client.Close();
-            } catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-
+            client = new TcpClient();
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
             try
             {
-                byte[] bytes = Encoding.UTF8.GetBytes("ALO?");
-                client = new TcpClient(tbxIPInput.Text, portNum);
+                //client = new TcpClient(tbxIPInput.Text, portNum);
+                client.Connect(tbxIPInput.Text, portNum);
+                btnConnect.Enabled = false;
                 stream = client.GetStream();
-                stream.Write(bytes, 0, bytes.Length);
+                streamRead();
             }
             catch (Exception err)
             {
@@ -70,6 +56,50 @@ namespace TCPClient
         {
             byte[] bytes = Encoding.UTF8.GetBytes("RIGHT!");
             stream.Write(bytes, 0, bytes.Length);
+        }
+        
+        private async void streamRead()
+        {
+            while (true)
+            {
+                int n;
+                string cmd;
+                byte[] bytes = new byte[1024];
+                n = await stream.ReadAsync(bytes, 0, bytes.Length);
+                cmd = Encoding.UTF8.GetString(bytes, 0, n);
+                Debug.WriteLine(Encoding.UTF8.GetString(bytes, 0, n));
+
+                switch (cmd)
+                {
+                    case "UPLOCKED":
+                        btnUp.Enabled = false;
+                        break;
+                    case "UNLOCKUP":
+                        btnUp.Enabled = true;
+                        break;
+                    case "DOWNLOCKED":
+                        btnDown.Enabled = false;
+                        break;
+                    case "UNLOCKDOWN":
+                        btnDown.Enabled = true;
+                        break;
+                    case "LEFTLOCKED":
+                        btnLeft.Enabled = false;
+                        break;
+                    case "UNLOCKLEFT":
+                        btnLeft.Enabled = true;
+                        break;
+                    case "RIGHTLOCKED":
+                        btnRight.Enabled = false;
+                        break;
+                    case "UNLOCKRIGHT":
+                        btnRight.Enabled = true;
+                        break;
+                    default:
+                        MessageBox.Show("Unknown message from server: " + cmd);
+                        break;
+                }
+            }
         }
     }
 }
