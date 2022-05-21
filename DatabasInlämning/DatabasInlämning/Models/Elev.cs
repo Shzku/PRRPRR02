@@ -12,9 +12,9 @@ namespace DatabasInlämning.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        //[Column(TypeName = "varchar")]
-        //public string PersonNr { get; set; }
-        //public string Förnamn { get; set; }
-        //public string Efternamn { get; set; }
+        [Column(TypeName = "varchar(10)")]
+        public string PersonNr { get; set; }
+        public string Förnamn { get; set; }
+        public string Efternamn { get; set; }
     }
 }
