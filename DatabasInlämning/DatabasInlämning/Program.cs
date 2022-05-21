@@ -16,8 +16,8 @@ namespace DatabasInlämning
             string efternamn = Console.ReadLine();
             
             Elev elev = new Elev();
-            elev.Förnamn = förnamn;
-            elev.Efternamn = efternamn;
+            //elev.Förnamn = förnamn;
+            //elev.Efternamn = efternamn;
             //elev.PersonNr = persNr;
             service.LäggTillElev(elev);
         }
