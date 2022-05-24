@@ -138,17 +138,39 @@ namespace DatabasInlämning
             var qry = (from läser in Kontext.tblLäser
                        group läser by läser.KursID).ToList();*/
 
-            
+            //var qry = Kontext.tblKurser.AsEnumerable();
 
-            var qry2 = Kontext.tblLäser.AsEnumerable()
+            //var qry3 = Kontext.tblLäser.AsEnumerable();
+
+            var qry2 = (from läser in Kontext.tblLäser
+                        join kurs in Kontext.tblKurser on läser.KursID equals kurs.KursID
+                        select new
+                        {
+                            kursKod = kurs.KursKod,
+                            kursNamn = kurs.KursNamn,
+                            kursId = läser.KursID
+                        }).AsEnumerable().OrderBy(x => x.kursId)
+                        .GroupBy(läser => läser.kursId).ToList();
+
+            /*var qry4 = qry3.Join(qry,
+                läser => läser.KursID,
+                kurs => kurs.KursID,
+                (läser, kurs) => new
+                {
+                    kurs,
+                    läser,
+                    kursId = läser.KursID
+                }).GroupBy(läser => läser.kursId).ToList();*/
+
+            /*var qry2 = Kontext.tblLäser.AsEnumerable()
                         .GroupBy(läser => läser.KursID)
-                        .ToList();
+                        .ToList();*/
 
             Console.WriteLine(qry2);
             foreach( var bruh in qry2)
             {
-                Console.WriteLine("KursID: {0}", bruh.Key);
-                Console.WriteLine(bruh.Count());
+                var tmp = bruh.ElementAt(0);
+                Console.WriteLine(tmp.kursNamn + " " + tmp.kursKod + " " + bruh.Count());
             }
             return;
         }
