@@ -112,8 +112,33 @@ namespace DatabasInlämning
             return;
         }
 
-        public void EleverPerKurs(int id)
+        public void EleverPerKurs()
         {
+            /*var qry = (from läser in Kontext.tblLäser
+
+                       join kurs in Kontext.tblKurser on läser.KursID equals kurs.KursID
+                       into groupedCollection
+
+                        select new
+                        {
+                            Students = groupedCollection,
+                            StandardName = läser.KursID
+                        });
+            */
+
+            var qry = (from läser in Kontext.tblLäser
+                     join kurs in Kontext.tblKurser on läser.KursID equals kurs.KursID
+                     select new
+                     {
+                         läserKod = läser.KursID,
+                         kursNamn = kurs.KursKod
+                     });
+
+            Console.WriteLine(qry);
+            foreach( var bruh in qry)
+            {
+                Console.WriteLine(bruh.läserKod + " " + bruh.kursNamn);
+            }
             return;
         }
     }

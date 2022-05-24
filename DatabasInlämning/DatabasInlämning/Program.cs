@@ -178,6 +178,13 @@ namespace DatabasInlämning
                     service.KurserPerElev(id);
                     Console.ReadLine();
                     break;
+                case "5":
+                    Console.Clear();
+                    Console.WriteLine("Visa elever för varje kurs");
+                    Console.WriteLine("--------------------------");
+                    service.EleverPerKurs();
+                    Console.ReadLine();
+                    break;
                 default:
                     break;
             }
