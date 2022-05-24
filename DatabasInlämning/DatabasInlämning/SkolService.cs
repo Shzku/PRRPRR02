@@ -124,20 +124,31 @@ namespace DatabasInlämning
                             Students = groupedCollection,
                             StandardName = läser.KursID
                         });
-            */
+            
 
             var qry = (from läser in Kontext.tblLäser
                      join kurs in Kontext.tblKurser on läser.KursID equals kurs.KursID
+                     
                      select new
                      {
                          läserKod = läser.KursID,
                          kursNamn = kurs.KursKod
                      });
 
-            Console.WriteLine(qry);
-            foreach( var bruh in qry)
+            var qry = (from läser in Kontext.tblLäser
+                       group läser by läser.KursID).ToList();*/
+
+            
+
+            var qry2 = Kontext.tblLäser.AsEnumerable()
+                        .GroupBy(läser => läser.KursID)
+                        .ToList();
+
+            Console.WriteLine(qry2);
+            foreach( var bruh in qry2)
             {
-                Console.WriteLine(bruh.läserKod + " " + bruh.kursNamn);
+                Console.WriteLine("KursID: {0}", bruh.Key);
+                Console.WriteLine(bruh.Count());
             }
             return;
         }
