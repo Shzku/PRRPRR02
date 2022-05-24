@@ -151,7 +151,8 @@ namespace DatabasInlämning
             Console.WriteLine("2) Visa alla kurser");
             Console.WriteLine("3) Visa alla läser");
             Console.WriteLine("4) Visa kurser per elev");
-            Console.WriteLine("5) Gå tillbaka");
+            Console.WriteLine("5) Visa elever per kurs");
+            Console.WriteLine("6) Gå tillbaka");
             Console.Write("\r\nVälj ett alternativ: ");
 
             switch (Console.ReadLine())
@@ -170,12 +171,9 @@ namespace DatabasInlämning
                     break;
                 case "4":
                     Console.Clear();
-                    Console.WriteLine("Visa kurs per elev");
+                    Console.WriteLine("Visa kurser per elev");
                     Console.WriteLine("------------------");
-                    service.AllaElevPoster();
-                    Console.Write("\r\nVälj elev: ");
-                    int id = int.Parse(Console.ReadLine());
-                    service.KurserPerElev(id);
+                    service.KurserPerElev();
                     Console.ReadLine();
                     break;
                 case "5":

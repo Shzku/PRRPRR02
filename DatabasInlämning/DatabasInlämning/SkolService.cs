@@ -94,20 +94,28 @@ namespace DatabasInlämning
             return;
         }
 
-        public void KurserPerElev(int id)
+        public void KurserPerElev()
         {
-            var x = (from läser in Kontext.tblLäser
-                     join elev in Kontext.tblElever on läser.ElevID equals elev.Id
-                     join kurs in Kontext.tblKurser on läser.KursID equals kurs.KursID
-                     select new
-                     {
-                         elevNamn = elev.Förnamn,
-                         läserKod = läser.KursID,
-                         kursNamn = kurs.KursKod
-                     });
-            foreach(var bruh in x)
+            var query = (from läser in Kontext.tblLäser
+                        join elev in Kontext.tblElever on läser.ElevID equals elev.Id
+                        select new
+                        {
+                            elevFör = elev.Förnamn,
+                            elevEfter = elev.Efternamn,
+                            elevId = läser.ElevID
+                        })
+                        .AsEnumerable()
+                        .OrderBy(läser => läser.elevId)
+                        .GroupBy(läser => läser.elevId)
+                        .ToList();
+
+            string format = "{0,-12} {1,-11} {2}";
+            Console.WriteLine(format, "Förnamn", "Efternamn", "Antal kurser");
+
+            foreach (var elev in query)
             {
-                Console.WriteLine(bruh.läserKod + " " + bruh.elevNamn + " " + bruh.kursNamn);
+                var tmp = elev.ElementAt(0);
+                Console.WriteLine(format, tmp.elevFör, tmp.elevEfter, elev.Count());
             }
             return;
         }
