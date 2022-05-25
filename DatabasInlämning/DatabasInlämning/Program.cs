@@ -51,7 +51,9 @@ namespace DatabasInlämning
             Console.WriteLine("1) Lägg till elev");
             Console.WriteLine("2) Lägg till kurs");
             Console.WriteLine("3) Lägg till läser");
-            Console.WriteLine("4) Gå tillbaka");
+            Console.WriteLine("4) Lägg till bok");
+            Console.WriteLine("5) Lägg till lån");
+            Console.WriteLine("6) Gå tillbaka");
             Console.Write("\r\nVälj ett alternativ: ");
 
             switch (Console.ReadLine())
@@ -104,6 +106,41 @@ namespace DatabasInlämning
                     läser.ElevID = elevId;
                     läser.KursID = kursId;
                     service.LäggTillLäser(läser);
+                    break;
+
+                case "4":
+                    Console.Clear();
+                    Console.WriteLine("Lägg till bok");
+                    Console.WriteLine("-------------");
+
+                    Console.Write("Boktitel: ");
+                    string bokTitel = Console.ReadLine();
+                    Console.Write("Ämne: ");
+                    string bokÄmne = Console.ReadLine();
+
+                    Bok bok = new Bok();
+                    bok.Titel = bokTitel;
+                    bok.Ämne = bokÄmne;
+                    service.LäggTillBok(bok);
+                    break;
+
+                case "5":
+                    Console.Clear();
+                    Console.WriteLine("Lägg till lån");
+                    Console.WriteLine("-------------");
+
+                    service.AllaElevPoster();
+                    Console.Write("\r\nVälj elev: ");
+                    int elevLånId = int.Parse(Console.ReadLine());
+
+                    service.AllaBokPoster();
+                    Console.WriteLine("\r\nVälj bok: ");
+                    int bokId = int.Parse(Console.ReadLine());
+
+                    BokLån bokLån = new BokLån();
+                    bokLån.ElevId = elevLånId;
+                    bokLån.BokId = bokId;
+                    service.LäggTillLån(bokLån);
                     break;
                 default:
                     break;

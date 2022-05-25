@@ -145,5 +145,29 @@ namespace DatabasInlämning
             }
             return;
         }
+
+        public Bok LäggTillBok(Bok bok)
+        {
+            Kontext.tblBok.Add(bok);
+            Kontext.SaveChanges();
+
+            return bok;
+        }
+
+        public void AllaBokPoster()
+        {
+            foreach(var bok in Kontext.tblBok)
+            {
+                Console.WriteLine(bok.BokId + " " + bok.Titel + " " + bok.Ämne);
+            }
+        }
+
+        public BokLån LäggTillLån(BokLån bokLån)
+        {
+            Kontext.tblBokLån.Add(bokLån);
+            Kontext.SaveChanges();
+
+            return bokLån;
+        }
     }
 }
