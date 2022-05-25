@@ -14,6 +14,8 @@ namespace DatabasInlämning
         public DbSet<Elev> tblElever { get; set; }
         public DbSet<Kurs> tblKurser { get; set; }
         public DbSet<Läser> tblLäser { get; set; }
+        public DbSet<Bok> tblBok { get; set; }
+        public DbSet <BokLån> tblBokLån { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
